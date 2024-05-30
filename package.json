@@ -1,0 +1,21 @@
+{
+  "name": "vite-plugin-index-gen",
+  "version": "0.0.1",
+  "description": "",
+  "author": "",
+  "license": "MIT",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "clean": "rimraf ./dist",
+    "test": "vitest",
+    "build": "tsup"
+  },
+  "keywords": [],
+  "devDependencies": {
+    "rimraf": "^5.0.7",
+    "tsup": "^8.0.2",
+    "typescript": "^5.4.5",
+    "vitest": "^1.6.0"
+  }
+}
