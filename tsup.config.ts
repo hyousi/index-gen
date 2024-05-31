@@ -1,4 +1,5 @@
 import { defineConfig, Options } from "tsup";
+import { version } from "./package.json";
 
 const formats = ["cjs", "esm"] as const;
 
@@ -21,6 +22,9 @@ export default defineConfig(
         clean: true,
         minify: true,
         target: "node16",
+        env: {
+          PACKAGE_VERSION: version,
+        },
       } satisfies Options)
   )
 );
