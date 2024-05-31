@@ -5,15 +5,28 @@
   "author": "ze.dang",
   "license": "MIT",
   "type": "module",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "main": "dist/cjs/index.cjs",
+  "module": "dist/esm/index.js",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/esm/index.d.ts",
+        "default": "./dist/esm/index.js"
+      },
+      "require": {
+        "types": "./dist/cjs/index.d.cts",
+        "default": "./dist/cjs/index.cjs"
+      }
+    },
+    "./package.json": "./package.json"
+  },
+  "bin": {
+    "index-gen": "dist/cjs/cli.cjs"
+  },
   "scripts": {
     "clean": "rimraf ./dist",
     "test": "vitest",
     "build": "tsup"
-  },
-  "bin": {
-    "index-gen": "./dist/cjs/cli.cjs"
   },
   "keywords": [],
   "devDependencies": {
