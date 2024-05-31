@@ -1,21 +1,31 @@
 {
   "name": "vite-plugin-index-gen",
-  "version": "0.0.1",
-  "description": "",
-  "author": "",
+  "version": "0.1.0",
+  "description": "A Vite plugin to generate index.ts files",
+  "author": "ze.dang",
   "license": "MIT",
   "type": "module",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "clean": "rimraf ./dist",
     "test": "vitest",
     "build": "tsup"
   },
+  "bin": {
+    "index-gen": "./dist/cjs/cli.cjs"
+  },
   "keywords": [],
   "devDependencies": {
+    "@types/node": "^20.12.13",
+    "memfs": "^4.9.2",
     "rimraf": "^5.0.7",
     "tsup": "^8.0.2",
     "typescript": "^5.4.5",
+    "vite": "^5.2.12",
     "vitest": "^1.6.0"
+  },
+  "dependencies": {
+    "commander": "^12.1.0"
   }
 }
