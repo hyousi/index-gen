@@ -1,6 +1,6 @@
 {
   "name": "vite-plugin-index-gen",
-  "version": "0.1.2",
+  "version": "0.0.0-development",
   "description": "A Vite plugin to generate index.ts files",
   "author": "ze.dang",
   "license": "MIT",
@@ -26,13 +26,22 @@
   "scripts": {
     "clean": "rimraf ./dist",
     "test": "vitest",
-    "build": "tsup"
+    "build": "tsup",
+    "semantic-release": "semantic-release",
+    "prepare": "husky"
   },
   "keywords": [],
   "devDependencies": {
+    "@commitlint/cli": "^19.3.0",
+    "@commitlint/config-conventional": "^19.2.2",
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/npm": "^12.0.1",
     "@types/node": "^20.12.13",
+    "husky": "^9.0.11",
     "memfs": "^4.9.2",
     "rimraf": "^5.0.7",
+    "semantic-release": "^24.0.0",
     "tsup": "^8.0.2",
     "typescript": "^5.4.5",
     "vite": "^5.2.12",
@@ -40,5 +49,9 @@
   },
   "dependencies": {
     "commander": "^12.1.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hyousi/vite-plugin-index-gen"
   }
 }
