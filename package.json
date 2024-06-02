@@ -25,6 +25,7 @@
   },
   "scripts": {
     "clean": "rimraf ./dist",
+    "commit": "git-cz",
     "test": "vitest",
     "build": "tsup",
     "semantic-release": "semantic-release",
@@ -34,11 +35,14 @@
   "devDependencies": {
     "@commitlint/cli": "^19.3.0",
     "@commitlint/config-conventional": "^19.2.2",
+    "@commitlint/cz-commitlint": "^19.2.0",
     "@semantic-release/changelog": "^6.0.3",
     "@semantic-release/git": "^10.0.1",
     "@semantic-release/npm": "^12.0.1",
     "@types/node": "^20.12.13",
+    "commitizen": "^4.3.0",
     "husky": "^9.0.11",
+    "inquirer": "9",
     "memfs": "^4.9.2",
     "rimraf": "^5.0.7",
     "semantic-release": "^24.0.0",
@@ -53,5 +57,10 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/hyousi/vite-plugin-index-gen"
+  },
+  "config": {
+    "commitizen": {
+      "path": "@commitlint/cz-commitlint"
+    }
   }
 }
