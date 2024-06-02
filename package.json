@@ -1,5 +1,5 @@
 {
-  "name": "vite-plugin-index-gen",
+  "name": "index-gen",
   "version": "0.0.0-development",
   "description": "A Vite plugin to generate index.ts files",
   "author": "ze.dang",
@@ -28,7 +28,7 @@
     "commit": "git-cz",
     "test": "vitest",
     "build": "tsup",
-    "semantic-release": "semantic-release",
+    "release": "semantic-release",
     "prepare": "husky"
   },
   "keywords": [],
